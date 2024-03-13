@@ -1,8 +1,31 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>guessing game</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="main-container">
+      <div class="section-center fixed-margin">
+        <div class="info">
+          <h1>
+            <p>build</p>
+            <p>game</p>
+            <p>javascript</p>
+          </h1>
+        </div>
+        <div class="guess-container">
+          <h4>Guess a number from 1 to 100 <br />your number is high</h4>
+          <div class="btn-input">
+            <input id="input" type="number" name="guess" class="btn" />
+            <button type="button" id="check" class="btn">check</button>
+          </div>
+          <button id="reload">refresh</button>
+          <h4>you have <span></span>chance</h4>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
