@@ -11,21 +11,22 @@
       <div class="section-center fixed-margin">
         <div class="info">
           <h1>
-            <p>build</p>
+            <p>Guessing</p>
             <p>game</p>
-            <p>javascript</p>
           </h1>
         </div>
         <div class="guess-container">
-          <h4>Guess a number from 1 to 100 <br />your number is high</h4>
+          <h4 class="guess-info">Guess a number from 1 to 100</h4>
+          <p class="message">guess now!!</p>
           <div class="btn-input">
             <input id="input" type="number" name="guess" class="btn" />
-            <button type="button" id="check" class="btn">check</button>
+            <button type="button" id="check" class="result btn">check</button>
+            <button id="reload">refresh</button>
+            <h4>you have <span class="score">6</span> chance</h4>
           </div>
-          <button id="reload">refresh</button>
-          <h4>you have <span></span>chance</h4>
         </div>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>

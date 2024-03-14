@@ -13,7 +13,7 @@ body {
 }
 
 .main-container {
-  width: 70vw;
+  width: 90vw;
   max-width: 90vw;
   height: 80vh;
   border-radius: 1.5rem;
@@ -25,12 +25,10 @@ body {
   );
 }
 
-.fixed-margin {
-  width: 80%;
-  margin: 0 auto;
-}
 .section-center {
   display: grid;
+  width: 80%;
+  margin: 0 auto;
   height: 100%;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
@@ -40,6 +38,7 @@ body {
 .info {
   border-left: 5px solid #fff;
   color: #fff;
+  justify-self: center;
 }
 .info h1 {
   padding: 1rem;
@@ -52,26 +51,39 @@ body {
 }
 
 .guess-container {
-  justify-self: left;
-  padding: 2rem;
+  /* justify-self: left; */
+  padding: 1rem 2rem;
   background: #fff;
   text-align: center;
   border-radius: 10px;
 }
 .guess-container h4 {
   font-size: 1.1rem;
-  padding-bottom: 1rem;
+  margin: 1rem 0;
   letter-spacing: 2px;
+}
+.guess-info,
+.message {
+  background-color: rgb(33, 91, 114);
+  padding: 0.75rem 0;
+  color: #fff;
+}
+.message {
+  margin: 1rem 0;
+  border: 2px solid rgb(30, 80, 101);
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .btn-input {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  display: grid;
+  row-gap: 0.7rem;
 }
 
 .btn-input .btn {
-  width: 50%;
   padding: 1rem 0;
   border-radius: 5px;
 }
@@ -84,41 +96,62 @@ body {
   font-weight: bolder;
 }
 
-#check {
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 1.3rem;
-  background: #756092;
-  color: #fff;
-  border: none;
-}
 #check:hover,
 #reload:hover {
   background: #7436ca;
 }
-#reload {
+#reload,
+#check {
   width: 100%;
   padding: 0.75rem;
   font-size: 1.3rem;
   text-transform: capitalize;
   letter-spacing: 2px;
   cursor: pointer;
-  margin-bottom: 0.75rem;
+  /* margin-bottom: 0.75rem; */
   background: #756092;
   color: #fff;
   border: none;
   border-radius: 5px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
+  .main-container {
+    height: 100%;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
   .section-center {
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-content: center;
   }
   .info {
     text-align: center;
     border-left: none;
     border-bottom: 5px solid #fff;
+  }
+}
+
+.correct {
+  background: blue;
+  color: #fff;
+  animation: zoom ease-in-out 3s;
+}
+.wrong {
+  background: red;
+  color: #fff;
+  /* transform: scale(1.2); */
+  animation: zoom ease-in-out 3s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
