@@ -38,27 +38,6 @@ check.addEventListener('click', function () {
       message.classList.add('wrong');
     }
   }
-  // else if (guess > randNum) {
-  //   if (score > 1) {
-  //     displayMessage('Guess to High');
-  //     score--;
-  //     myScore.textContent = score;
-  //   } else {
-  //     displayMessage(`you've lost try again`);
-  //     myScore.textContent = 0;
-  //     message.classList.add('wrong');
-  //   }
-  // } else if (guess < randNum) {
-  //   if (score > 1) {
-  //     displayMessage('Guess to low');
-  //     score--;
-  //     myScore.textContent = score;
-  //   } else {
-  //     displayMessage(`you've lost try again`);
-  //     myScore.textContent = 0;
-  //     message.classList.add('wrong');
-  //   }
-  // }
 });
 
 // reset game
@@ -68,8 +47,32 @@ reload.addEventListener('click', () => {
   score = 6;
   myScore.textContent = score;
   randNum = Math.trunc(Math.random() * 100) + 1;
+  message.classList.remove('wrong');
+  message.classList.remove('correct');
 });
 
 const displayMessage = (inputMessage) => {
   message.textContent = inputMessage;
 };
+
+// else if (guess > randNum) {
+//   if (score > 1) {
+//     displayMessage('Guess to High');
+//     score--;
+//     myScore.textContent = score;
+//   } else {
+//     displayMessage(`you've lost try again`);
+//     myScore.textContent = 0;
+//     message.classList.add('wrong');
+//   }
+// } else if (guess < randNum) {
+//   if (score > 1) {
+//     displayMessage('Guess to low');
+//     score--;
+//     myScore.textContent = score;
+//   } else {
+//     displayMessage(`you've lost try again`);
+//     myScore.textContent = 0;
+//     message.classList.add('wrong');
+//   }
+// }
